@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import csv
 import time
 import os
-from dotenv import load_dotenv
+import typed_dotenv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-load_dotenv()
+SECRETS = typed_dotenv.load(".env")
 
 def login(driver):
     try:
@@ -24,8 +24,8 @@ def login(driver):
         )
         entrar_button.click()
 
-        AMANTINO_EMAIL = os.getenv('AMANTINO_EMAIL')
-        AMANTINO_SENHA = os.getenv('AMANTINO_SENHA')
+        AMANTINO_EMAIL = SECRETS['AMANTINO_EMAIL']
+        AMANTINO_SENHA = SECRETS['AMANTINO_SENHA']
 
         # Preencher o formulário de login
         email_input = WebDriverWait(driver, 10).until(
