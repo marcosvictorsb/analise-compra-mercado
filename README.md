@@ -1,26 +1,29 @@
-
-# Projeto de extração de produtos de compras feita no Amantino pelo site
+# Projeto de Extração de Produtos de Compras no Amantino
 
 Este é um projeto em Python desenvolvido com o objetivo de acessar o site do Amantino e extrair informações sobre todos os produtos disponíveis para compra.
 
 ## Descrição
 
-O objetivo principal deste projeto é automatizar o processo de coleta de informações sobre as comprar realiadas no site do Amantino, um supermercado que oferece uma variedade de produtos. Através de técnicas de web scraping, o programa irá acessar os pedidos já realizado no site, extrair os os produtos e armazenar essas informações para uso posterior.
+O objetivo principal deste projeto é automatizar o processo de coleta de informações sobre as compras realizadas no site do Amantino, um supermercado que oferece uma variedade de produtos. Utilizando técnicas de web scraping, o programa acessará os pedidos já realizados no site, extrairá os produtos e armazenará essas informações para uso posterior.
 
 ## Funcionalidades
 
 - Acesso automatizado ao site do Amantino.
-- Coleta sobre as compra realizadas.
-- Armazenamento dos dados em um csv para analise posterior.
+- Coleta de informações sobre as compras realizadas.
+- Armazenamento dos dados em um arquivo CSV para análise posterior.
 
 ## Como Usar
 
 1. Certifique-se de ter o Python [instalado](https://www.python.org/downloads/) em seu sistema.
 2. Clone este repositório: `git clone git@github.com:marcosvictorsb/analise-compra-mercado.git`
 3. Acesse o diretório do projeto: `cd analise-compra-mercado`
-4. Instale as dependências necessárias: `pip install -r requirements.txt`
-5. Duplique o arquivo .env.example e insira o email e a senha do site do Amantino
-6. Execute o script principal: `python main.py`
+4. Crie e ative um ambiente virtual:
+   - `python -m venv nome_do_ambiente`
+   - Ativando o ambiente virutal no Windows: `nome_do_ambiente\Scripts\activate`
+   - Ativando o ambiente virutal no macOS/Linux: `source nome_do_ambiente/bin/activate`
+5. Instale as dependências necessárias: `pip install -r requirements.txt`
+6. Renomeio o arquivo `.env.example` para `.env` e insira seu e-mail e senha nas variaveis presente nesse arquivo.
+7. Execute o script principal: `python main.py`
 
 ## Requisitos
 
